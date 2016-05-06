@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XtQ-BL-xgb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="U5y-v0-Tbl">
+            <objects>
+                <navigationController id="XtQ-BL-xgb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D3T-bm-IE6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Abt-yt-aLP" kind="relationship" relationship="rootViewController" id="KcA-zO-27j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2b-JF-2MY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="366"/>
+        </scene>
+        <!--凯哥环信-->
+        <scene sceneID="d6o-O9-kEw">
+            <objects>
+                <viewController id="Abt-yt-aLP" customClass="LKLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aak-oO-3Cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="I8v-5A-6IU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ORv-ai-dQN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="liukai" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SaJ-d2-Uft">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdL-tP-uOh">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt6-OT-dNw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BI8-1e-Bdo"/>
+                                    <constraint firstAttribute="width" constant="61" id="siD-JT-K4P"/>
+                                </constraints>
+                                <state key="normal" title="注册"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BI8-1e-Bdo"/>
+                                        <exclude reference="siD-JT-K4P"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BI8-1e-Bdo"/>
+                                        <include reference="siD-JT-K4P"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="registerClick:" destination="Abt-yt-aLP" eventType="touchUpInside" id="87V-hg-0iP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyC-gJ-Fi5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="a7r-MD-E0a"/>
+                                    <constraint firstAttribute="height" constant="30" id="vE2-a7-COf"/>
+                                </constraints>
+                                <state key="normal" title="登录"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a7r-MD-E0a"/>
+                                        <exclude reference="vE2-a7-COf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="a7r-MD-E0a"/>
+                                        <include reference="vE2-a7-COf"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginClick:" destination="Abt-yt-aLP" eventType="touchUpInside" id="DGP-rF-vF1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vt6-OT-dNw" firstAttribute="top" secondItem="YdL-tP-uOh" secondAttribute="bottom" constant="40" id="1fs-Me-EiW"/>
+                            <constraint firstItem="SaJ-d2-Uft" firstAttribute="leading" secondItem="ORv-ai-dQN" secondAttribute="leadingMargin" constant="40" id="E0c-0y-o68"/>
+                            <constraint firstItem="YdL-tP-uOh" firstAttribute="top" secondItem="SaJ-d2-Uft" secondAttribute="bottom" constant="20" id="Fm1-Fs-Oz6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SaJ-d2-Uft" secondAttribute="trailing" constant="40" id="LA0-Az-egw"/>
+                            <constraint firstItem="YdL-tP-uOh" firstAttribute="leading" secondItem="SaJ-d2-Uft" secondAttribute="leading" id="Lhq-Ec-wS1"/>
+                            <constraint firstItem="IyC-gJ-Fi5" firstAttribute="trailing" secondItem="YdL-tP-uOh" secondAttribute="trailing" id="NIA-LD-Ppc"/>
+                            <constraint firstItem="vt6-OT-dNw" firstAttribute="leading" secondItem="YdL-tP-uOh" secondAttribute="leading" id="PM4-Zb-jnf"/>
+                            <constraint firstItem="SaJ-d2-Uft" firstAttribute="centerX" secondItem="ORv-ai-dQN" secondAttribute="centerX" id="WNp-Zs-9SP"/>
+                            <constraint firstItem="IyC-gJ-Fi5" firstAttribute="top" secondItem="YdL-tP-uOh" secondAttribute="bottom" constant="40" id="kff-G1-l1o"/>
+                            <constraint firstItem="YdL-tP-uOh" firstAttribute="centerX" secondItem="SaJ-d2-Uft" secondAttribute="centerX" id="kkb-Sl-WM5"/>
+                            <constraint firstItem="SaJ-d2-Uft" firstAttribute="top" secondItem="aak-oO-3Cg" secondAttribute="bottom" constant="20" id="uGc-9q-a2w"/>
+                            <constraint firstItem="YdL-tP-uOh" firstAttribute="trailing" secondItem="SaJ-d2-Uft" secondAttribute="trailing" id="yiI-wT-GwH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SaJ-d2-Uft"/>
+                                <exclude reference="YdL-tP-uOh"/>
+                                <exclude reference="vt6-OT-dNw"/>
+                                <exclude reference="IyC-gJ-Fi5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="E0c-0y-o68"/>
+                                <exclude reference="LA0-Az-egw"/>
+                                <exclude reference="WNp-Zs-9SP"/>
+                                <exclude reference="uGc-9q-a2w"/>
+                                <exclude reference="Fm1-Fs-Oz6"/>
+                                <exclude reference="Lhq-Ec-wS1"/>
+                                <exclude reference="kkb-Sl-WM5"/>
+                                <exclude reference="yiI-wT-GwH"/>
+                                <exclude reference="NIA-LD-Ppc"/>
+                                <exclude reference="kff-G1-l1o"/>
+                                <exclude reference="1fs-Me-EiW"/>
+                                <exclude reference="PM4-Zb-jnf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SaJ-d2-Uft"/>
+                                <include reference="YdL-tP-uOh"/>
+                                <include reference="vt6-OT-dNw"/>
+                                <include reference="IyC-gJ-Fi5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="E0c-0y-o68"/>
+                                <include reference="LA0-Az-egw"/>
+                                <include reference="WNp-Zs-9SP"/>
+                                <include reference="uGc-9q-a2w"/>
+                                <include reference="Fm1-Fs-Oz6"/>
+                                <include reference="Lhq-Ec-wS1"/>
+                                <include reference="kkb-Sl-WM5"/>
+                                <include reference="yiI-wT-GwH"/>
+                                <include reference="NIA-LD-Ppc"/>
+                                <include reference="kff-G1-l1o"/>
+                                <include reference="1fs-Me-EiW"/>
+                                <include reference="PM4-Zb-jnf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="凯哥环信" id="RTy-pM-ZxT"/>
+                    <connections>
+                        <outlet property="passwordField" destination="YdL-tP-uOh" id="QTq-Ny-yI5"/>
+                        <outlet property="userNameField" destination="SaJ-d2-Uft" id="NnT-nF-dNp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNw-cX-xqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="366"/>
+        </scene>
+    </scenes>
+</document>
